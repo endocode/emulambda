@@ -231,7 +231,7 @@ def emit_to_function(verbose, stream, func):
     i = 1
     try:
         with sys.stdin if stream is '-' else open(stream, 'r') as event_stream:
-            for line in event_stream:
+            for line in iter( event_stream.readline,'') :
                 gc.collect()  # force GC between each run to get quality memory usage sample
                 print(
                     "\nObject %i %s" % (i, line.rstrip()[:65] + ('...' if len(line) > 65 else ''))) if verbose else None
