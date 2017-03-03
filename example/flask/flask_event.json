@@ -1,0 +1,9 @@
+{
+  "account": "123456789012",
+  "region": "eu-central-1",
+  "detail": {},
+  "detail-type": "Scheduled Event",
+  "source": "aws.events",
+  "time": "2017-03-03T09:00:00Z",
+  "id": "6b50ffb5-0735-49d3-a369-0ee3b8f151ab"
+}
