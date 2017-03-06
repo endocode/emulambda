@@ -14,6 +14,10 @@ def lambda_handler(event=None, context=None):
     print "Lambda function invoked /lambda_handler"
     response = LambdaResponse()
 
+    if event == None:
+        print "event is None"
+        return '', 200
+
     reqMethod = event['httpMethod']
     if reqMethod == 'POST':
         print "Method: %s" % reqMethod
